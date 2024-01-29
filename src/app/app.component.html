@@ -1,5 +1,4 @@
 <div>
-  <h1>Calorie Calculator App</h1>
-  <app-food-input (calculateCaloriesClick)="onCalculateCaloriesClick($event)"></app-food-input>
-  <app-calorie-calculator [foodDescription]="foodDescription"></app-calorie-calculator>
+  <app-food-input (calculateCalories)="onCalculateCalories($event)"></app-food-input>
+  <app-calorie-calculator [calories]="calories"></app-calorie-calculator>
 </div>

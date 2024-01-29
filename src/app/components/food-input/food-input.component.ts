@@ -9,10 +9,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './food-input.component.scss'
 })
 export class FoodInputComponent {
-  @Output() calculateCaloriesClick = new EventEmitter<string>();
+  @Output() calculateCalories = new EventEmitter<string>();
   foodDescription: string = '';
 
-  calculateCalories() {
-    this.calculateCaloriesClick.emit(this.foodDescription);
+  onCalculateCalories() {
+    this.calculateCalories.emit(this.foodDescription);
   }
 }

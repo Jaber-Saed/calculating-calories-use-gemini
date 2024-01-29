@@ -17,7 +17,9 @@ import { FoodInputComponent } from './components/food-input/food-input.component
     BrowserModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+  ],
   // bootstrap: [AppComponent],
 })
+
 export class AppModule { }
