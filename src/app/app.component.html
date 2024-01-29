@@ -1,4 +1,4 @@
 <div class="body-container">
-  <app-food-input (calculateCalories)="onCalculateCalories($event)"></app-food-input>
+  <app-food-input (calculateCalories)="onCalculateCalories($event)"  (uploadImage)="onUploadImage($event)"></app-food-input>
   <app-calorie-calculator [calories]="calories"></app-calorie-calculator>
 </div>

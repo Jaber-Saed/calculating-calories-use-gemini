@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CalorieCalculatorComponent } from './components/calorie-calculator/calorie-calculator.component';
 import { FoodInputComponent } from './components/food-input/food-input.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,10 @@ import { FoodInputComponent } from './components/food-input/food-input.component
     CalorieCalculatorComponent,
     BrowserModule,
     FormsModule,
+    HttpClientModule,
   ],
-  providers: [
-  ],
+
+  // bootstrap: [AppComponent],
 })
 
 export class AppModule { }

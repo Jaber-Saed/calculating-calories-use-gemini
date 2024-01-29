@@ -1,0 +1,16 @@
+/* food-input.component.scss */
+
+.upload-icon {
+  display: inline-block;
+  border: 2px solid #ddd;
+  padding: 8px;
+  cursor: pointer;
+  text-align: center;
+  color: #888;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+}
+
+.upload-icon:hover {
+  border: 2px solid #3498db;
+}

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FoodInputComponent } from './components/food-input/food-input.component';
 import { CalorieCalculatorComponent } from './components/calorie-calculator/calorie-calculator.component';
 import { CalorieCountingService } from './service/calorie-counting.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -12,24 +13,21 @@ import { CalorieCountingService } from './service/calorie-counting.service';
 })
 export class AppComponent {
   calories: string | undefined;
-
+  public img: any = null;
   constructor(private calorieCountingService: CalorieCountingService) { }
 
   onCalculateCalories(foodDescription: string) {
-
-    this.calorieCountingService.calculateCalories(foodDescription).subscribe(
-      (description) => {
-        const mockedCalories = this.mockCalorieCalculation(description);
-        this.calories = mockedCalories;
-      },
-      (error) => {
-        console.error('Error getting food description:', error);
-      }
-    );
+    this.calorieCountingService.calculateCalories(foodDescription, this.img).subscribe((calories) => {
+      this.calories = calories;
+    }
+    )
   }
 
-  private mockCalorieCalculation(description: string): string {
-    console.log('Food description:', description);
-    return description;
+
+
+  onUploadImage(image: File) {
+    this.img = image
   }
+
 }
+
