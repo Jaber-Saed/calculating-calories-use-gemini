@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { FoodInputComponent } from './components/food-input/food-input.component';
 import { CalorieCalculatorComponent } from './components/calorie-calculator/calorie-calculator.component';
-import { FoodDescriptionService } from './service/food-description.service';
-import { HttpClientModule } from '@angular/common/http';
+import { CalorieCountingService } from './service/calorie-counting.service';
 
 @Component({
   selector: 'app-root',
@@ -12,18 +11,14 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  calories: number | undefined;
+  calories: string | undefined;
 
-  constructor(private foodDescriptionService: FoodDescriptionService) { }
+  constructor(private calorieCountingService: CalorieCountingService) { }
 
   onCalculateCalories(foodDescription: string) {
-    // Call your GPT service to get food description
 
-    this.foodDescriptionService.getDescription(foodDescription).subscribe(
+    this.calorieCountingService.calculateCalories(foodDescription).subscribe(
       (description) => {
-
-        // Mocking calorie calculation for demonstration
-        // Replace this with your actual calorie calculation logic
         const mockedCalories = this.mockCalorieCalculation(description);
         this.calories = mockedCalories;
       },
@@ -33,9 +28,8 @@ export class AppComponent {
     );
   }
 
-  private mockCalorieCalculation(description: string): number {
-    // Replace this with your actual calorie calculation logic
-    // For now, just return a random number
-    return Math.floor(Math.random() * 500) + 500;
+  private mockCalorieCalculation(description: string): string {
+    console.log('Food description:', description);
+    return description;
   }
 }
