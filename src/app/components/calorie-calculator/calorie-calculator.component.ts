@@ -8,4 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class CalorieCalculatorComponent {
   @Input() calories: string | undefined;
+// <div * NgIf="calories !== undefined" >
+
 }
