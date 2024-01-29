@@ -9,15 +9,15 @@ import { FoodInputComponent } from './components/food-input/food-input.component
 
 @NgModule({
   declarations: [
+  ],
+  imports: [
     AppComponent,
     FoodInputComponent,
     CalorieCalculatorComponent,
-  ],
-  imports: [
     BrowserModule,
     FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  // bootstrap: [AppComponent],
 })
 export class AppModule { }

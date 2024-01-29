@@ -3,6 +3,8 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-food-input',
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './food-input.component.html',
   styleUrl: './food-input.component.scss'
 })
