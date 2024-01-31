@@ -1,7 +1,0 @@
-{
-  "/api": {
-    "target": "https://redmarket.online",
-    "secure": false,
-    "changeOrigin": true
-  }
-}
