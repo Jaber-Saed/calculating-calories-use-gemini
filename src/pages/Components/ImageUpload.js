@@ -7,9 +7,6 @@ const ImageUpload = ({ onImageUpload }) => {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     setImage(file);
-  };
-
-  const handleUpload = () => {
     if (image) {
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -26,14 +23,8 @@ const ImageUpload = ({ onImageUpload }) => {
       <input
         type="file"
         onChange={handleImageChange}
-        className="mb-2 p-2 border rounded"
+        className="w-full mb-2 p-2 border rounded"
       />
-      <button
-        onClick={handleUpload}
-        className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
-      >
-        Upload Image
-      </button>
     </div>
   );
 };

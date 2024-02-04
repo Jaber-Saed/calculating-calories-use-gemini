@@ -6,7 +6,7 @@ import ResultDisplay from "./Components/ResultDisplay";
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const dotenv = require('dotenv').config()
 const fs = require("fs");
-const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 function fileToGenerativePart(path, mimeType) {
   return {
