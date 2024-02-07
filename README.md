@@ -20,6 +20,7 @@ This project is a web application for calculating calories using Gemini. It is b
 - Responsive design using Tailwind CSS.
 - User-friendly interface.
 
+
 ## Getting Started
 
 ### Prerequisites
